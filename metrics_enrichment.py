@@ -9,10 +9,6 @@ from moveminer.metrics.acceleration_calculation import (
     SimpleAccelerationCalculation,
 )
 
-# from moveminer2.metrics.turning_angle_calculation import (
-#     TurningAngleCalculation,
-#     TurningAngleCalculator,
-# )
 from moveminer.metrics.direction_calculation import (
     DirectionAngleCalculator,
     HaversineDirectionAngleCalculation,

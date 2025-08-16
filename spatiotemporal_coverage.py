@@ -80,6 +80,8 @@ def plot_spatiotemporal_coverage(df, category, output_dir):
     # Título geral
     plt.tight_layout()
     plt.subplots_adjust(top=0.92)
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='lower center', fontsize=24, ncol=5, bbox_to_anchor=(0.5, -0.05))
     # Verifica se a pasta de saída existe, se não, cria
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -104,8 +106,8 @@ if __name__ == "__main__":
     enriched_points["t"] = pd.to_datetime(enriched_points["t"])
     output_folder = "./assets/Spatiotemporal Coverage/"
     categorias = [
-        None,
-        # "Company",
+        # None,
+        "Company",
         # "Company Type",
         # "Platoon",
         # "Platoon Type",
